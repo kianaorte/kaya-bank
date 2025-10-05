@@ -1,0 +1,16 @@
+:root {
+  display: flexbox;
+  flex-grow: 1;
+  background-color: #eae2da;
+  h2 {
+    color: #6868c9;
+  }
+  h1,
+  h3,
+  h4,
+  h5,
+  h6 {
+    margin: 0;
+    color: #3e2c1f;
+  }
+}
