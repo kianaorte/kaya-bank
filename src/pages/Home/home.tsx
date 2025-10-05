@@ -15,11 +15,17 @@ const cardContent = [
 ];
 
 const Home: React.FC = () => {
+  const [catCoins, setCatCoins] = React.useState(0);
+
+  const getCoins = () => {
+    return "You have a balance of " + catCoins + " cat coins 🐱";
+  };
+
   return (
-    <div className={styles.home}>
-      <h1>Balance</h1>
+    <div className={styles.home} onClick={() => setCatCoins(catCoins + 1)}>
+      <h2>Balance</h2>
       {/* TODO: Fetch balance from backend */}
-      <Panel content="You have 1000 cat coins" />
+      <Panel content={getCoins()} />
       <h2>Cards</h2>
       <div className={styles.cardContainer}>
         {cardContent.map((panel, index) => (
