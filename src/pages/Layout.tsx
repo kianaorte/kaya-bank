@@ -1,13 +1,12 @@
-import Header from '../components/Header/Header';
-import styles from './layout.module.scss'
-import React from 'react';
+import React from "react";
+import RoutesConfig from "./router";
 
 const Layout: React.FC = () => {
-    return(
-    <div className={styles.Layout}>
-        <Header />
-    </div>
-    );
-}
+  return (
+    <>
+      <RoutesConfig />
+    </>
+  );
+};
 
 export default Layout;

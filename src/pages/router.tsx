@@ -1,20 +1,17 @@
-import { Route } from "react-router-dom";
-
+import { Routes, Route } from "react-router-dom";
 import HomeLoan from '../pages/HomeLoan/homeLoan';
 import Insurance from '../pages/Insurance/insurance';
 import Investing from '../pages/Investing/investing';
-import Home from "./Home/Home";
+import Home from "./Home/home";
 
-const RoutesConfig = () => {
-  return (
-    <>
-      <Route path="/" element={<Home />} />
-      <Route path="/about" element={<HomeLoan />} />
-      <Route path="/about" element={<Insurance />} />
-      <Route path="/about" element={<Investing />} />
-        {/* TODO: make error page
-      <Route path="*" element={<NotFound />} /> */}
-    </>
-  );
-}
+const RoutesConfig = () => (
+  <Routes>
+    <Route path="/" element={<Home />} />
+    <Route path="/home-loan" element={<HomeLoan />} />
+    <Route path="/insurance" element={<Insurance />} />
+    <Route path="/investing" element={<Investing />} />
+    {/* <Route path="*" element={<NotFound />} /> */}
+  </Routes>
+);
+
 export default RoutesConfig;
