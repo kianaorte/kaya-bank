@@ -1,34 +1,17 @@
-import AppBar from "@mui/material/AppBar";
-import Toolbar from "@mui/material/Toolbar";
-import Typography from "@mui/material/Typography";
-import Container from "@mui/material/Container";
-import PetIcon from "@mui/icons-material/Pets";
-// import { Avatar } from "@mui/material";
+import React from "react";
+import styles from "./Header.module.scss";
+import PetsIcon from "/src/assets/paw.svg";
 
-function ResponsiveAppBar() {
+const Header: React.FC = () => {
   return (
-    <AppBar position="static">
-      <Container maxWidth="xl">
-        <Toolbar disableGutters>
-          <PetIcon sx={{ display: { md: "flex" }, mr: 1 }} />
-          <Typography
-            variant="h6"
-            noWrap
-            component="a"
-            sx={{
-              mr: 2,
-              display: { md: "flex" },
-              fontFamily: "monospace",
-              fontWeight: 700,
-              textDecoration: "none",
-            }}
-          >
-            Kaya Bank
-          </Typography>
-        </Toolbar>
-        {/* <Avatar alt="Kaya Bank Logo" src="/static/images/avatar/1.jpg" /> */}
-      </Container>
-    </AppBar>
+    <div className={styles.header}>
+      <PetsIcon />
+      <h2>Kaya Bank</h2>
+      {/* <div className={styles.hContent}>
+        <h2>CoolGuy123 😎</h2>
+      </div> */}
+    </div>
   );
-}
-export default ResponsiveAppBar;
+};
+
+export default Header;
