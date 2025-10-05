@@ -1,4 +1,5 @@
 import Card from "../../components/Card/Card";
+import NavBar from "../../components/Navbar/Navbar";
 import Panel from "../../components/Panel/Panel";
 import styles from "./home.module.scss";
 import React from "react";
@@ -22,15 +23,20 @@ const Home: React.FC = () => {
   };
 
   return (
-    <div className={styles.home} onClick={() => setCatCoins(catCoins + 1)}>
-      <h2>Balance</h2>
-      {/* TODO: Fetch balance from backend */}
-      <Panel content={getCoins()} />
-      <h2>Cards</h2>
-      <div className={styles.cardContainer}>
-        {cardContent.map((panel, index) => (
-          <Card key={index} cardName={panel.cardName} expiry={panel.expiry} />
-        ))}
+    <div className={styles.home}>
+      <NavBar />
+      <div>
+        <h2>Balance</h2>
+        {/* TODO: Fetch balance from backend */}
+        <div onClick={() => setCatCoins(catCoins + 1)}>
+          <Panel content={getCoins()} />
+        </div>
+        <h2>Cards</h2>
+        <div className={styles.cardContainer}>
+          {cardContent.map((panel, index) => (
+            <Card key={index} cardName={panel.cardName} expiry={panel.expiry} />
+          ))}
+        </div>
       </div>
     </div>
   );
