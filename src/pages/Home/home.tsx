@@ -4,6 +4,7 @@ import Panel from "../../components/Panel/Panel";
 import styles from "./home.module.scss";
 import React from "react";
 
+//make a card backend thingy as well?
 const cardContent = [
   {
     cardName: "Meowster Card",
@@ -17,6 +18,7 @@ const cardContent = [
 
 const Home: React.FC = () => {
   const [catCoins, setCatCoins] = React.useState(0);
+  const [openPanel, setOpenPanel] = React.useState(false);
 
   const getCoins = () => {
     return "You have a balance of " + catCoins + " cat coins 🐱";
@@ -34,10 +36,17 @@ const Home: React.FC = () => {
         <h2>Cards</h2>
         <div className={styles.cardContainer}>
           {cardContent.map((panel, index) => (
-            <Card key={index} cardName={panel.cardName} expiry={panel.expiry} />
+            <div onClick={() => setOpenPanel(!openPanel)} key={index}>
+              <Card
+                key={index}
+                cardName={panel.cardName}
+                expiry={panel.expiry}
+              />
+            </div>
           ))}
         </div>
       </div>
+      {openPanel && <Panel content="Card details coming soon!" />}
     </div>
   );
 };
