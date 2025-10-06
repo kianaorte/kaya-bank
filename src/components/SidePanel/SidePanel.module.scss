@@ -1,0 +1,25 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  align-items: flex-end;
+}
+.sidePanel {
+  display: flex;
+  flex-direction: column;
+  background-color: #ffefea;
+  border-radius: 8px;
+  border-color: #cbb5a4;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  width: 300px;
+  margin-right: 4px;
+  height: 100vh;
+}
+
+.cardDetails {
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  gap: 8px;
+}
