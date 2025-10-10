@@ -1,7 +1,7 @@
 import Card from "../../components/Card/Card";
 import NavBar from "../../components/Navbar/Navbar";
 import Panel from "../../components/Panel/Panel";
-import SidePanel from "../../components/SidePanel/sidePanel";
+import SidePanel from "../../components/SidePanel/SidePanel";
 import styles from "./home.module.scss";
 import React from "react";
 
@@ -38,21 +38,20 @@ const Home: React.FC = () => {
           <Panel content={getCoins()} />
         </div>
         <h2>Cards</h2>
-        <div className={styles.cardContainer}>
-          {cardContent.map((panel, index) => (
-            <>
-              <div
-                onClick={() => {
-                  setOpenPanel(!openPanel);
-                  setSelectedCard(index);
-                }}
-                key={index}
-              >
-                <Card key={index} cardName={panel.name} expiry={panel.expiry} />
-              </div>
-            </>
-          ))}
-        </div>
+        {cardContent.map((panel, index) => (
+          <>
+            <div
+              className={styles.cardContainer}
+              onClick={() => {
+                setOpenPanel(!openPanel);
+                setSelectedCard(index);
+              }}
+              key={index}
+            >
+              <Card key={index} cardName={panel.name} expiry={panel.expiry} />
+            </div>
+          </>
+        ))}
       </div>
       {openPanel && <SidePanel card={cardContent[selectedCard]} />}
     </div>
