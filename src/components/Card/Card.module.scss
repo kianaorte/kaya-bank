@@ -7,18 +7,21 @@
   box-shadow: 0px 4px 4px rgba(126, 56, 56, 0.25);
   width: 240px;
   min-height: 128px;
-  .name {
-    padding-left: 8px;
-  }
-  .divider {
-    border-bottom: 1px solid #ebd6cc;
-    margin: 40px;
-  }
-  .exp {
-    position: absolute;
-    right: 0;
-    bottom: 0;
-    padding-right: 12px;
-    color: #3e2c1f;
-  }
+}
+
+.name {
+  padding-left: 8px;
+  pointer-events: none;
+}
+.divider {
+  border-bottom: 1px solid #ebd6cc;
+  margin: 40px;
+}
+.exp {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  padding-right: 12px;
+  color: #3e2c1f;
+  pointer-events: none;
 }
