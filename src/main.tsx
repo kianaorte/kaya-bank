@@ -1,15 +1,13 @@
 import { StrictMode } from "react";
-import { createRoot } from "react-dom/client";
-import "./index.css";
-import Layout from "./pages/Layout.tsx";
-import { BrowserRouter } from "react-router-dom";
+import * as ReactDOM from "react-dom/client";
+import { RouterProvider } from "react-router-dom";
 import Header from "./components/Header/Header.tsx";
+import "./index.css";
+import { router } from "./pages/router.tsx";
 
-createRoot(document.getElementById("root")!).render(
+ReactDOM.createRoot(document.getElementById("root")!).render(
   <StrictMode>
-    <BrowserRouter>
-      <Header />
-      <Layout />
-    </BrowserRouter>
+    <Header />
+    <RouterProvider router={router} />
   </StrictMode>
 );
