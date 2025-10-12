@@ -5,7 +5,11 @@
   background-color: #d8c8bd;
   width: 140px;
   margin: 0 0 0 8px;
+
   .navItem {
+    text-decoration: none;
+    background-color: #d8c8bd;
+    border: none;
     display: flex;
     align-items: center;
     gap: 8px;
