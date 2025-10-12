@@ -1,15 +1,17 @@
 import styles from "./Panel.module.scss";
 
 interface PanelInterface {
-  title?: string;
   content: string;
+  content2?: string;
+  title?: string;
 }
 
-const Panel: React.FC<PanelInterface> = ({ title, content }) => {
+const Panel: React.FC<PanelInterface> = ({ ...props }) => {
   return (
     <div className={styles.panel}>
-      <h2> {title} </h2>
-      <p> {content} </p>
+      <h2> {props.title} </h2>
+      <p> {props.content} </p>
+      <p> {props.content2} </p>
     </div>
   );
 };

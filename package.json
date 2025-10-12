@@ -13,9 +13,10 @@
   "dependencies": {
     "@emotion/react": "^11.14.0",
     "@emotion/styled": "^11.14.1",
-    "lottie-web": "^5.13.0",
+    "prop-types": "^15.8.1",
     "react": "^19.1.1",
     "react-dom": "^19.1.1",
+    "react-lottie": "^1.2.10",
     "react-router-dom": "^7.9.3",
     "sass": "^1.93.2",
     "vite-plugin-svgr": "^4.5.0"
@@ -25,6 +26,7 @@
     "@types/node": "^24.6.0",
     "@types/react": "^19.2.0",
     "@types/react-dom": "^19.2.0",
+    "@types/react-lottie": "^1.2.10",
     "@vitejs/plugin-react": "^5.0.4",
     "@vitejs/plugin-vue": "^6.0.1",
     "concurrently": "^9.2.1",

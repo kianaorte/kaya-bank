@@ -4,3 +4,15 @@
   gap: 20px;
   height: 100vh;
 }
+
+.content {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  height: 100vh;
+}
+.hlPanel {
+  display: flex;
+  gap: 8px;
+}
