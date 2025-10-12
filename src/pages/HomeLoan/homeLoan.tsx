@@ -1,7 +1,9 @@
-import LottiePlayer from "../../components/Lottie/LottiePlayer";
+import Lottie from "react-lottie";
 import NavBar from "../../components/Navbar/Navbar";
 import Panel from "../../components/Panel/Panel";
-import styles from "./homeLoan.module.scss";
+import styles from "../../pages/pages.module.scss";
+
+import animationData from "../../assets/HomeLoan.json";
 
 const hLContent = {
   title: "Looking to get a new home?",
@@ -12,6 +14,14 @@ const hLContent = {
 };
 
 const HomeLoan: React.FC = () => {
+  const defaultOptions = {
+    autoplay: true,
+    loop: false,
+    animationData: animationData,
+    rendererSettings: {
+      preserveAspectRatio: "xMidYMid slice",
+    },
+  };
   return (
     <div className={styles.page}>
       <NavBar />
@@ -23,7 +33,9 @@ const HomeLoan: React.FC = () => {
             content={hLContent.content}
             content2={hLContent.content2}
           />
-          <LottiePlayer />
+          <div>
+            <Lottie options={defaultOptions} height={400} width={400} />
+          </div>
         </div>
       </div>
     </div>
